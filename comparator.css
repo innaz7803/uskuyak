@@ -1,0 +1,371 @@
+
+/*#compare-overlay {  width: 740px; height:0px; visibility:hidden; }
+    .fixed { position: fixed; top: -0.75em; z-index: 99}
+    #compare-overlay.compare-hidden {display: none; height: auto; margin: 1em auto; visibility: visible !important;}
+#compare-layer { background: #f60; background: rgba(255,102,0,.85); border-radius: 4px; padding:3px 0; box-shadow: 0 0 6px #fc9c1e;  }
+    #compare-layer .col { background: #fff; width:130px; border-radius: 3px; margin-left: 0.75em; position: relative; font-size: 0.92em; height: 65px; display:none;}
+    #compare-layer .col:hover{
+        -webkit-box-shadow: 0px 0px 15px rgba(85, 85, 85, 0.8);
+        -moz-box-shadow: 0px 0px 15px rgba(85, 85, 85, 0.8);
+        box-shadow: 0px 0px 15px rgba(85, 85, 85, 0.8);
+    }
+    #compare-layer .col P {  color: #444; line-height: 1.25em; margin-left: 60px}
+    #compare-layer .col IMG { float: left; margin: 0 0.25em; width: 50px}
+    #compare-layer .col .btn {  }
+    #compare-layer H3 { color: #fff; float: left; line-height: 1.35em; padding:0.2em 0.5em 0.2em 1em; width: 9em;  }
+    #compare-layer .botonera { float: right; border-left: 1px dashed #fff; padding:0.25em 0.5em }
+        #compare-layer .botonera A { display: block; text-align: center; font-size: 0.92em}*/
+
+#comparador header { border-bottom: 1px solid #a0a0a0; margin-bottom: 1em}
+#comparador header H1 {color:#e95d0f; font-size:1.7em ; font-weight: 400; float: left; margin-top: 0.1em; padding: 0.2em 0 0 0.5em; width: 75%;line-height: 1.2em;}
+
+.accordion, #comparacion .pvp, #comparacion .difs.on TD, header H2, #comparacion-site-map H2 {font-family: 'nimbus-sans-condensed', Gudea, sans-serif; }
+.accordion {color:#005199; font-weight: 400; font-size: 1.25em; cursor: pointer;}
+#comparacion {margin:2em 1em ;  border:1px solid #bdc3c7;  border-radius: 4px; box-shadow: 0 0 5px #888; }
+table {  width: 100%; overflow: hidden;}
+    table thead TH { vertical-align: bottom; }
+#comparacion TD { position: relative; width: 19%}
+#comparacion .best {color:#ff4500; font-weight: 700}
+    #comparacion .difs.on TD { background-color:#fdf0b2; font-size: 1.16em; font-weight: 700}
+    #comparacion tr.on { display:table-row; }
+
+
+#comparacion tbody th {  text-align:left;    width:24%;  }
+
+ #comparacion TD, tbody th {border-bottom: 1px solid #dcdcdc; border-left: 1px solid #dcdcdc; background: url("") repeat-y right top; }
+ #comparacion tbody th { background-image: none;}
+ /*#comparacion th h2,*/ #comparacion th SPAN {border: 1px solid #dcdcdc; display: block;  margin:2px 1px 0 0;-webkit-border-top-left-radius: 4px;
+-webkit-border-top-right-radius: 4px;
+-moz-border-radius-topleft: 4px;
+-moz-border-radius-topright: 4px;
+border-top-left-radius: 4px;
+border-top-right-radius: 4px; }
+    /*#comparacion th h2 A, */#comparacion th SPAN A { background: #f86d15 url("") repeat-x left bottom; color:#fff; display: block; margin:1px; padding:0.5em 0.25em;
+        -webkit-border-top-right-radius: 4px;
+        -moz-border-radius-topleft: 4px;
+        -moz-border-radius-topright: 4px;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px}
+    /*#comparacion th h2 { font-size: 1em}*/
+ #comparacion thead th { /*border-bottom: 1px solid #dcdcdc;*/ padding: 0}
+    #comparacion th #selector SPAN { margin: ; border: 0}
+
+
+
+#comparacion TBODY tr:nth-child(even) {background:#f1f1f1;}
+
+#comparacion TBODY th A {  float: right; margin-right: 0.2em}
+#comparacion td { color:#6f6f6f; }
+#comparacion td .foto { text-align: center; position: relative;}
+    #comparacion td .foto IMG { width: 110px }
+    #comparacion td .foto .del,  #compare-layer .col .btn { background: url("") no-repeat 0 0; width:20px ; height:20px ; overflow: hidden; text-indent: -999em; position: absolute; right: 0; top: 0; border: 0; box-shadow: 0 0 0 #fff}
+        #comparacion td .foto .del:hover { background-position: 0 -20px }
+      /*  #compare-layer .col .btn { background-position: -20px 0}
+        #compare-layer .col .del:hover {background-position: -20px -20px}*/
+
+#comparacion .pvp { font-weight: 700; font-size: 1.16em;  text-align: right;}
+
+#opinionesResumen STRONG { display: block; text-align: center; margin-top: 0.25em; padding-left: 0}
+.accordion {border-top:2px solid #dcdcdc; border-bottom:2px solid #dcdcdc; background: #c3d1de url("") no-repeat 5px 2px;  padding: 3px 5px 3px 2em; }
+.accordion.plegar { background-position: 5px -18px }
+#comparacion .opt-D, #comparacion tr td:last-child{ background-image: none; }
+#opinionesResumen {border-top:1px dashed #ccc; padding-top: 0.5em  }
+#comparacion td .botonera {margin:1em 0; text-align: center;}
+#comparacion td .botonera A {border: 1px solid #2f86d8; background: #3393ef url("") repeat-x center top; color:#fff; font-weight:700; padding:0.36em 0.75em;   -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; -webkit-box-shadow: inset 1px 1px 0px 0px #bad8f7; box-shadow: inset 1px 1px 0px 0px #bad8f7; text-shadow: 1px 1px 0px #2f86d8; }
+   /* #compare-layer .botonera A { margin-top: 0.36em; padding-top: 0.25em; padding-bottom: 0.25em;  cursor:pointer;}
+    #compare-layer .botonera .del {border: 1px solid #717171; background-color: #9a9a9a; text-shadow: 1px 1px 0px #717171;  }*/
+#comparador .regresar { text-align: left;}
+#comparador .back {background: url("") no-repeat left center; line-height:18px; padding: 2px 1.5em;}
+    #comparador .back:hover {color:#f60;}
+
+#comparacion .botonera .btn { display: none;}
+
+
+
+#selector { margin-bottom: 1em}
+    #selector STRONG { float: left; margin-left: 0.5em; margin-top:4px;}
+
+
+
+    /** site-map **/
+    #comparacion-site-map {margin:1em .5em;}
+    #comparacion-site-map H2 { clear: both; font-size: 1.36em; font-weight: 400; margin-top: 0.5em}
+        #comparacion-site-map H2 A { background: url("") no-repeat left center; color:#f60; padding-left: .75em}
+
+    .items-layer .col {border: 1px solid #bdc3c7; margin:1em 1% 1.5em ; width: 22.5%;
+            border-radius: 3px;  box-shadow: 0 0 3px #b9b9b9;}
+            .items-layer .col:HOVER {cursor: pointer; box-shadow: 0 0 5px #888;}
+        .items-layer .col:last-child {margin-right: 0}
+    .items-layer IMG { float: left; margin-left: 0.5em; width: 84px}
+    .items-layer P, .items-layer DIV { margin-left: 95px; margin-right: .5em}
+    .items-layer P { color: #005199; height:50px; line-height: 1.32em; font-weight: 700; margin-top: 0; padding-left: 0.25em; text-align: left;}
+    .items-layer DIV { border-top:1px dashed #bdbdbd; padding:.75em 0 .5em; text-align: center;}
+        .items-layer .btn {border:1px solid #2f86d8; background:#3393ef url("") repeat-x center top ; color: #fff; font-size: 0.92em; margin-top: 0.5em; padding: 0.25em 1em; border-radius:3px;}
+        .items-layer .btn SPAN { background: url("") no-repeat right center; padding-right:0.75em;  }
+
+
+    /** listado de links **/
+    #comparacion-links .regresar:first-child { margin-top: 1.25em}
+    #comparacion-links .categoria { /*border-right:1px solid #CCC; */ float: left; margin-top: 0.5em; margin-bottom: 0.5em; padding: 1em; /*width: 25%;*/ width: 33.3%}
+    #comparacion-links .cat1 {border-bottom:1px solid #f60; color:#f60; font-weight: 400; font-size: 1.25em; margin-bottom: 0.5em}
+    .cat2 { font-weight: 700; margin-bottom: 0.5em}
+    .cat2 UL { margin-left: 1em}
+    .cat2 LI {color:#6b6b6b; font-weight: 400}
+    #comparacion-links .entradilla {margin-left:0.5em; margin-right: 0.5em; margin-bottom: 1.5em; padding: 0.5em 1.5em; text-align: justify;}
+
+/****/
+/* ------------------------------------------
+CSS TOGGLE SWITCHES (IonuÈ› Colceriu)
+Licensed under Unlicense
+https://github.com/ghinda/css-toggle-switch
+------------------------------------------ */
+
+/* Hide by default */
+
+.switch .slide-button,
+.toggle p span {
+    display: none;
+}
+
+/* Toggle Switches */
+
+/* We can't test for a specific feature,
+ * so we only target browsers with support for media queries.
+ */
+@media only screen {
+
+    /* Checkbox
+     */
+    .toggle {
+        position: relative;
+        padding: 0;
+        /*margin-left: 100px;*/
+         font-size: 0.92em;
+         width: 70px;
+         z-index: 1
+    }
+
+    /* Position the label over all the elements, except the slide-button
+     * Clicking anywhere on the label will change the switch-state
+     */
+    .toggle label {
+        position: relative;
+        z-index: 3;
+
+        display: block;
+        width: 100%;
+    }
+
+    /* Don't hide the input from screen-readers and keyboard access
+     */
+    .toggle input {
+        position: absolute;
+        opacity: 0;
+        z-index: 5;
+    }
+
+    .toggle p {
+        position: absolute;
+        /*left: -100px;*/
+
+        width: 100%;
+        margin: 0;
+        /*padding-right: 100px;*/
+
+        text-align: left;
+    }
+
+    .toggle p span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 5;
+
+        display: block;
+        width: 50%;
+        /*margin-left: 100px;*/
+
+        text-align: center;
+    }
+
+    .toggle p span:last-child {
+        left: 50%;
+    }
+
+    .toggle .slide-button {
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 4;
+
+        display: block;
+        width: 50%;
+        height: 100%;
+        padding: 0;
+    }
+
+    /* Radio Switch
+     */
+    .switch {
+        position: relative;
+        padding: 0;
+    }
+
+    .switch input {
+        position: absolute;
+        opacity: 0;
+    }
+
+    .switch label {
+        position: relative;
+        z-index: 2;
+
+        float: left;
+        width: 50%;
+        height: 100%;
+
+        margin: 0;
+        text-align: center;
+    }
+
+    .switch .slide-button {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 0;
+        z-index: 1;
+
+        width: 50%;
+        height: 100%;
+    }
+
+    .switch input:last-of-type:checked ~ .slide-button {
+        left: 50%;
+    }
+
+
+
+
+
+    /* Shared */
+    .toggle,
+    .switch {
+        display: block;
+        /*height: 30px;*/
+        height: 24px;
+        float: right;
+        margin-right: 0.5em
+    }
+
+    .switch *,
+    .toggle * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    .switch .slide-button,
+    .toggle .slide-button {
+        display: block;
+
+        -webkit-transition: all 0.3s ease-out;
+        -moz-transition: all 0.3s ease-out;
+        -ms-transition: all 0.3s ease-out;
+        -o-transition: all 0.3s ease-out;
+        transition: all 0.3s ease-out;
+    }
+
+    .toggle label,
+    .toggle p,
+    .switch label {
+        line-height: 24px;
+        vertical-align: middle;
+    }
+
+    .toggle input:checked ~ .slide-button {
+        right: 50%;
+    }
+
+    /* Outline the toggles when the inputs are focused */
+    .toggle input:focus ~ .slide-button,
+    .switch input:focus + label {
+        outline: 1px dotted #888;
+    }
+
+    /* Bugfix for older Webkit, including mobile Webkit. Adapted from:
+     * http://css-tricks.com/webkit-sibling-bug/
+     */
+    .switch, .toggle {
+        -webkit-animation: bugfix infinite 1s;
+    }
+
+    @-webkit-keyframes bugfix { from { position: relative; } to { position: relative; } }
+
+
+    /* Standalone Themes */
+
+
+    /* Candy Theme
+     * Based on the "Sort Switches / Toggles (PSD)" by Ormal Clarck
+     * http://www.premiumpixels.com/freebies/sort-switches-toggles-psd/
+     */
+
+    .candy {
+        background-color: #a0a0a0;
+
+        color: #fff;
+        font-weight: bold;
+        text-align: center;
+        text-shadow: 1px 1px 1px #191b1e;
+
+        border-radius: 3px;
+
+        box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3), 0 1px 0px rgba(255, 255, 255, 0.2);
+    }
+
+    .candy input:checked + label {
+        color: #333;
+        text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+    }
+
+    .candy .slide-button {
+        border: 1px solid #333;
+
+        background-color: #70c66b;
+
+        background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0));
+        background-image:    -moz-linear-gradient(top, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0));
+        background-image:     -ms-linear-gradient(top, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0));
+        background-image:      -o-linear-gradient(top, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0));
+        background-image:         linear-gradient(top, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0));
+
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.45);
+
+        border-radius: 3px;
+    }
+
+    .candy p {
+        color: #333;
+
+        text-shadow: none;
+    }
+
+    .candy span {
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .candy.blue .slide-button {
+        background-color: #529fea;
+    }
+
+    .candy.yellow .slide-button {
+        background-color: #f5e560;
+    }
+
+
+
+}
+
